@@ -145,7 +145,7 @@ final class CouponCell: UITableViewCell {
             updateUI()
         } else {
             // 카운트가 끝나면 쿠폰 수령 가능 상태로 변경
-            isAvailable = true
+            isAvailable = false
             remainingTime = 60
             updateUI()
         }
