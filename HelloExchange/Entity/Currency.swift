@@ -10,6 +10,7 @@ import Foundation
 struct Currency: Equatable {
     let code: String
     let name: String
+    var krwRate: Double?
 }
 
 extension Currency {
