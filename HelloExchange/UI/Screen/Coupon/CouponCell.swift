@@ -104,7 +104,6 @@ final class CouponCell: UITableViewCell {
             let text = "쿠폰이 없어지기까지 \(Int(remainingTime))초 남았어요.\n어서 쿠폰을 받아보세요!"
             let attributedText = NSMutableAttributedString(string: text)
 
-            // 남은 초 숫자만 파란색 + 볼드
             if let range = text.range(of: "\(Int(remainingTime))") {
                 let nsRange = NSRange(range, in: text)
                 attributedText.addAttribute(.foregroundColor, value: UIColor.palette.blueDark, range: nsRange)
@@ -123,7 +122,6 @@ final class CouponCell: UITableViewCell {
             let text = "다음 쿠폰은 \(timeString) 후에 받을 수 있어요"
             let attributedText = NSMutableAttributedString(string: text)
 
-            // 시간 문자열만 파란색 + 볼드
             if let range = text.range(of: timeString) {
                 let nsRange = NSRange(range, in: text)
                 attributedText.addAttribute(.foregroundColor, value: UIColor.palette.blueDark, range: nsRange)
@@ -144,18 +142,22 @@ final class CouponCell: UITableViewCell {
             remainingTime -= 1
             updateUI()
         } else {
-            // 카운트가 끝나면 쿠폰 수령 가능 상태로 변경
-            isAvailable = false
-            remainingTime = 60
+            if isAvailable {
+                isAvailable = false
+                remainingTime = 24 * 3600 - 1
+            } else {
+                isAvailable = true
+                remainingTime = 60
+            }
             updateUI()
         }
     }
 
+
     @objc private func receiveButtonTapped() {
         guard isAvailable else { return }
-        // 쿠폰 수령 후 24시간 대기
         isAvailable = false
-        remainingTime = 1 * 10 - 1 // 23시간 59분 59초
+        remainingTime = 1 * 10 - 1
         updateUI()
     }
 
