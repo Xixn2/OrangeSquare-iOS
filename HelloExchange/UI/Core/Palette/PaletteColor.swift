@@ -30,6 +30,8 @@ public struct PaletteColor {
     /// F04242
     public let red: UIColor? = UIColor(hexString: "F04242")
 
+    /// F1E7C9
+    public let yellowBg: UIColor? = UIColor(hexString: "F1E7C9")
     /// F9D82E
     public let yellowLight: UIColor? = UIColor(hexString: "F9D82E")
     /// E0B406
