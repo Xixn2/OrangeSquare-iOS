@@ -11,6 +11,7 @@ struct Currency: Equatable {
     let code: String
     let name: String
     var krwRate: Double?
+    var isFavorite: Bool = false
 }
 
 extension Currency {

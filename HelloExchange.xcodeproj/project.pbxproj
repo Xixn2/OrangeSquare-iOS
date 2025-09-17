@@ -13,6 +13,7 @@
 		EA286A582E797CA600D3C849 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EA286A572E797CA600D3C849 /* Moya */; };
 		EA286A5A2E797CA600D3C849 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EA286A592E797CA600D3C849 /* ReactiveMoya */; };
 		EA286A5C2E797CA600D3C849 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EA286A5B2E797CA600D3C849 /* RxMoya */; };
+		EA286A672E7A34FE00D3C849 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = EA286A662E7A34FE00D3C849 /* SwiftKeychainWrapper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 				EA286A582E797CA600D3C849 /* Moya in Frameworks */,
 				EA286A5A2E797CA600D3C849 /* ReactiveMoya in Frameworks */,
 				EA286A562E797CA600D3C849 /* CombineMoya in Frameworks */,
+				EA286A672E7A34FE00D3C849 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +115,7 @@
 				EA286A572E797CA600D3C849 /* Moya */,
 				EA286A592E797CA600D3C849 /* ReactiveMoya */,
 				EA286A5B2E797CA600D3C849 /* RxMoya */,
+				EA286A662E7A34FE00D3C849 /* SwiftKeychainWrapper */,
 			);
 			productName = HelloExchange;
 			productReference = 5FF48DFD2E32574C0056E3D8 /* HelloExchange.app */;
@@ -146,6 +149,7 @@
 				EA286A172E79202700D3C849 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				EA286A1C2E79207400D3C849 /* XCRemoteSwiftPackageReference "Then" */,
 				EA286A542E797CA600D3C849 /* XCRemoteSwiftPackageReference "Moya" */,
+				EA286A652E7A34FE00D3C849 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5FF48DFE2E32574C0056E3D8 /* Products */;
@@ -185,7 +189,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4NUNMP597X;
+				DEVELOPMENT_TEAM = 3NVCLTSP9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloExchange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -213,7 +217,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4NUNMP597X;
+				DEVELOPMENT_TEAM = 3NVCLTSP9V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HelloExchange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,6 +405,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		EA286A652E7A34FE00D3C849 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -433,6 +445,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA286A542E797CA600D3C849 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		EA286A662E7A34FE00D3C849 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA286A652E7A34FE00D3C849 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

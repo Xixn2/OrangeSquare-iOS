@@ -1,6 +1,8 @@
 //
-//  CouponCell.swift
+//  ExchangeRateCell.swift
 //  HelloExchange
+//
+//  Created by 서지완 on 9/16/25.
 //
 
 import UIKit
