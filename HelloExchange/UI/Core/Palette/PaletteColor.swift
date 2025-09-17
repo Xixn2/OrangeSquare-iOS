@@ -39,6 +39,8 @@ public struct PaletteColor {
 
     /// 0AC229
     public let green: UIColor? = UIColor(hexString: "0AC229")
+    /// C9EBCB
+    public let greenBG: UIColor? = UIColor(hexString: "C9EBCB")
 
     /// 60C7FB
     public let blueLight: UIColor? = UIColor(hexString: "60C7FB")

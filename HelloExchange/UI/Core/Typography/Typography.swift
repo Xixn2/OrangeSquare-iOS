@@ -14,6 +14,10 @@ public struct Typography {
     public let weight: UIFont.Weight
     public let kerning: CGFloat
 
+    public var font: UIFont {
+        return UIFont.systemFont(ofSize: size, weight: weight)
+    }
+
     var attributes: [NSAttributedString.Key: Any] {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.minimumLineHeight = lineHeight
