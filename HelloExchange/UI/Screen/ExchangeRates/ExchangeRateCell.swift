@@ -22,13 +22,13 @@ final class ExchangeRateCell: UITableViewCell {
         $0.tintColor = .lightGray
     }
 
-    private let fullNameLabel = TypographyLabel(
+    public let fullNameLabel = TypographyLabel(
         text: " ",
         typography: .subheadBold,
         color: .palette.blue
     )
 
-    private let codeLabel = TypographyLabel(
+    public let codeLabel = TypographyLabel(
         text: " ",
         typography: .subhead,
         color: .palette.grey
@@ -46,7 +46,6 @@ final class ExchangeRateCell: UITableViewCell {
         $0.textAlignment = .center
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
-
     }
 
     private let valueLabel = TypographyLabel(
@@ -119,12 +118,35 @@ final class ExchangeRateCell: UITableViewCell {
         }
     }
 
-    // MARK: - Configure
-    func configure(fullName: String, code: String, value: String, tag: String, tagColor: UIColor) {
-        fullNameLabel.text = fullName
-        codeLabel.text = code
+    // MARK: - Configure (NSAttributedString 지원)
+    func configure(
+        fullName: NSAttributedString,
+        code: NSAttributedString,
+        value: String,
+        tag: String,
+        tagColor: UIColor
+    ) {
+        fullNameLabel.attributedText = fullName
+        codeLabel.attributedText = code
         valueLabel.text = value
         tagLabel.text = tag
         tagLabel.backgroundColor = tagColor
+    }
+
+    // 오버로드: 기존 String 버전과의 호환성을 위해 추가
+    func configure(
+        fullName: String,
+        code: String,
+        value: String,
+        tag: String,
+        tagColor: UIColor
+    ) {
+        configure(
+            fullName: NSAttributedString(string: fullName),
+            code: NSAttributedString(string: code),
+            value: value,
+            tag: tag,
+            tagColor: tagColor
+        )
     }
 }
